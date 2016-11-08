@@ -4,7 +4,7 @@
 `list-detail`
 
 
-@demo demo/index.html 
+@demo demo/index.html
 -->
 
 <dom-module id="list-detail">
@@ -14,7 +14,7 @@
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]</h2>
+
   </template>
 
   <script>
@@ -23,11 +23,12 @@
       is: 'list-detail',
 
       properties: {
-        prop1: {
-          type: String,
-          value: 'list-detail',
-        },
+
       },
+
+      //listeners: {},
+
+			//observers: [],
 
     });
   </script>
