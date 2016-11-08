@@ -16,29 +16,41 @@
 
 <dom-module id="list-detail">
 	<template>
-    <style include="paper-material iron-flex iron-flex-alignment"></style>
+		<style include="paper-material iron-flex iron-flex-alignment"></style>
 		<style>
 			:host {
 				display: block;
+			}
 
+			.list-detail_image-shop paper-card {
+				width: 100%;
+				height: 200px;
+			}
+
+			.list-detail_body {
+				padding: 20px;
 			}
 		</style>
 
 		<div class="list-detail_image-shop">
-			<paper-card heading="Image Shop" image="" elevation="1" animated-shadow="false"></paper-card>
+			<paper-card heading="Image Shop" image=""></paper-card>
 		</div>
-		<div class="list-detail_action-shop layout horizontal center-justified">
-      <div class="action-shop_shop-name">
-        <span>{{shopname}}</span>
-      </div>
-			<div class="action-shop_icon">
-				<iron-icon icon="icons:close"></iron-icon>
-        <iron-icon icon="icons:create"></iron-icon>
-        <iron-icon icon="image:remove-red-eye"></iron-icon>
-			</div>
-		</div>
-		<div class="list-detail_detail-shop">
 
+		<div elevation="1" class="list-detail_body">
+			<div class="list-detail_action-shop layout horizontal justified">
+				<div class="action-shop_shop-name">
+					<span>{{shopname}}</span>
+				</div>
+				<div class="action-shop_icon">
+					<iron-icon icon="icons:close"></iron-icon>
+					<iron-icon icon="icons:create"></iron-icon>
+					<iron-icon icon="image:remove-red-eye"></iron-icon>
+				</div>
+			</div>
+
+			<div class="list-detail_detail-shop">
+
+			</div>
 		</div>
 
 	</template>
@@ -51,15 +63,15 @@
 			properties: {
 
 
-        /**
+				/**
 				 * Variable for get name shop.
 				 */
-        shopname : {
-          type: String,
-          value: 'Big Shop' //Temporary
-        },
+				shopname : {
+					type: String,
+					value: 'Big Shop' //Temporary
+				},
 
-        /**
+				/**
 				* The z-depth of this element, from 0-5. Setting to 0 will remove the
 				* shadow, and each increasing number greater than 0 will be "deeper"
 				* than the last.
