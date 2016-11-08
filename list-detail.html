@@ -14,6 +14,7 @@
 
 <dom-module id="list-detail">
 	<template>
+    <style include="iron-flex iron-flex-alignment"></style>
 		<style>
 			:host {
 				display: block;
@@ -24,7 +25,7 @@
 		<div class="list-detail_image-shop">
 			<paper-card heading="Image Shop" image="" elevation="1" animated-shadow="false"></paper-card>
 		</div>
-		<div class="list-detail_action-shop">
+		<div class="list-detail_action-shop layout horizontal center-justified">
       <div class="action-shop_shop-name">
         <span>{{shopname}}</span>
       </div>
