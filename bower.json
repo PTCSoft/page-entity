@@ -1,6 +1,29 @@
 {
   "name": "list-detail",
+  "authors": [
+		"PTC Corporation <info@ptc.co.ir>"
+	],
+  "description": "iOrder PWA Elements List Detail",
   "main": "list-detail.html",
+  "keywords": [
+		"ptc",
+		"polymer",
+		"iorder",
+		"element",
+		"pwa",
+		"list",
+		"detail"
+	],
+  "license": "Copyright © 2016 PTC Corporation, All rights reserved",
+  "homepage": "https://github.com/PTCSoft/#",
+  "private": true,
+  "ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0"
   },
