@@ -1,4 +1,9 @@
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html"/>
+<link rel="import" href="../paper-card/paper-card.html"/>
+<link rel="import" href="../iron-icon/iron-icon.html"/>
+
+<link rel="import" href="iorder-icon.html"/>
 
 <!--
 `list-detail`
@@ -8,28 +13,55 @@
 -->
 
 <dom-module id="list-detail">
-  <template>
-    <style>
-      :host {
-        display: block;
-      }
-    </style>
+	<template>
+		<style>
+			:host {
+				display: block;
 
-  </template>
+			}
+		</style>
 
-  <script>
-    Polymer({
+		<div class="list-detail_image-shop">
+			<!--<paper-card heading="Image Shop" image="" elevation="1" animated-shadow="false"></paper-card>-->
+		</div>
+		<div class="list-detail_action-shop">
+      <div class="action-shop_shop-name">
+        <!--<span>{{shopname}}</span>-->
+      </div>
+			<div class="action-shop_icon">
+				<!--<iron-icon icon="icons:close"></iron-icon>
+        <iron-icon icon="icons:create"></iron-icon>
+        <iron-icon icon="image:remove-red-eye"></iron-icon>-->
+			</div>
+		</div>
+		<div class="list-detail_detail-shop">
 
-      is: 'list-detail',
+		</div>
 
-      properties: {
+	</template>
 
-      },
+	<script>
+		Polymer({
 
-      //listeners: {},
+			is: 'list-detail',
+
+			properties: {
+
+
+        // /**
+				//  * Variable for get name shop.
+				//  */
+        // shopname : {
+        //   type: String,
+        //   value: 'Big Shop' //Temporary
+        // },
+
+			},
+
+			//listeners: {},
 
 			//observers: [],
 
-    });
-  </script>
+		});
+	</script>
 </dom-module>
