@@ -3,7 +3,7 @@
 <link rel="import" href="../paper-card/paper-card.html"/>
 <link rel="import" href="../iron-icon/iron-icon.html"/>
 <link rel="import" href="../paper-material/paper-material.html"/>
-
+<link rel="import" href="../paper-styles/typography.html"/>
 
 <link rel="import" href="iorder-icon.html"/>
 
@@ -29,7 +29,17 @@
 
 			.list-detail_body {
 				padding: 20px;
+        border-bottom: 1px solid #E0E0E0;
 			}
+
+      .list-detail_action-shop {
+
+      }
+
+      .action-shop_shop-name {
+        @apply(--paper-font-title);
+      }
+
 		</style>
 
 		<div class="list-detail_image-shop">
@@ -47,11 +57,12 @@
 					<iron-icon icon="image:remove-red-eye"></iron-icon>
 				</div>
 			</div>
-
+    </div>
+    <!--<div elevation="1" class="list-detail_body">
 			<div class="list-detail_detail-shop">
-
+        Last Visit:
 			</div>
-		</div>
+		</div>-->
 
 	</template>
 
