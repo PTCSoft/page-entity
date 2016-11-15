@@ -26,7 +26,6 @@
             reflectToAttribute: true,
             value: 1
           },
-
         }
       };
     }
