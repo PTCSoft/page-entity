@@ -1,32 +1,32 @@
 <!doctype html>
 
 <html>
-	<head>
-		<title>list-detail test</title>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes"/>
-		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-		<script src="../../web-component-tester/browser.js"></script>
+  <head>
+    <title>list-detail test</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes"/>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
 
-		<link rel="import" href="../list-detail.html"/>
-	</head>
-	<body>
+    <link rel="import" href="../list-detail.html"/>
+  </head>
+  <body>
 
-		<test-fixture id="basic">
-			<template>
-				<list-detail></list-detail>
-			</template>
-		</test-fixture>
+    <test-fixture id="basic">
+      <template>
+        <list-detail></list-detail>
+      </template>
+    </test-fixture>
 
-		<script>
-			suite('list-detail', function() {
+    <script>
+      suite('list-detail', function() {
 
-				test('instantiating the element works', function() {
-					var element = fixture('basic');
-					assert.equal(element.is, 'list-detail');
-				});
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'list-detail');
+        });
 
-			});
-		</script>
-	</body>
+      });
+    </script>
+  </body>
 </html>

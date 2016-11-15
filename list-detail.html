@@ -24,69 +24,69 @@ Custom property   | Description                         | Default
 -->
 
 <dom-module id="list-detail">
-	<template>
-		<style include="paper-material iron-flex iron-flex-alignment"></style>
-		<style>
-			:host {
-				display: block;
+  <template>
+    <style include="paper-material iron-flex iron-flex-alignment"></style>
+    <style>
+      :host {
+        display: block;
 
-				@apply(--list-detail);
-			}
+        @apply(--list-detail);
+      }
 
-			.list-detail_image-shop iron-image {
-				width: 100%;
-				height: 200px;
-			}
+      .list-detail_image-shop iron-image {
+        width: 100%;
+        height: 200px;
+      }
 
-			.list-detail_body {
-				padding: 20px;
-				border-bottom: 1px solid var(--paper-grey-300);
-			}
+      .list-detail_body {
+        padding: 20px;
+        border-bottom: 1px solid var(--paper-grey-300);
+      }
 
-			.action-shop_shop-name {
-				@apply(--paper-font-title);
-			}
+      .action-shop_shop-name {
+        @apply(--paper-font-title);
+      }
 
-			.detail-shop_visitor, .detail-shop_day {
-				@apply(--paper-font-caption);
-				margin: 4px 0;
-			}
+      .detail-shop_visitor, .detail-shop_day {
+        @apply(--paper-font-caption);
+        margin: 4px 0;
+      }
 
-			.detail-shop_day {
-				color: var(--paper-grey-500);
-			}
+      .detail-shop_day {
+        color: var(--paper-grey-500);
+      }
 
       .detail-shop_lastvisit {
         @apply(--paper-font-body2);
       }
 
-		</style>
+    </style>
 
-		<div class="list-detail_image-shop">
-			<iron-image src=""></iron-image>
-		</div>
+    <div class="list-detail_image-shop">
+      <iron-image src=""></iron-image>
+    </div>
 
-		<div elevation="1" class="list-detail_body">
-			<div class="list-detail_action-shop layout horizontal justified">
-				<div class="action-shop_shop-name">
-					<span>{{shopname}}</span>
-				</div>
-				<div class="action-shop_icon">
-					<iron-icon icon="icons:close"></iron-icon>
-					<iron-icon icon="icons:create"></iron-icon>
-					<iron-icon icon="image:remove-red-eye"></iron-icon>
-				</div>
-			</div>
-		</div>
-		<div elevation="1" class="list-detail_body">
-			<div class="list-detail_detail-shop">
-				<div class="detail-shop_lastvisit">Last Visit:</div>
-				<div class="detail-shop_visitor">Visitor Ali Ramezani</div>
-				<div class="detail-shop_day">2 day ago</div>
-			</div>
-		</div>
+    <div elevation="1" class="list-detail_body">
+      <div class="list-detail_action-shop layout horizontal justified">
+        <div class="action-shop_shop-name">
+          <span>{{shopname}}</span>
+        </div>
+        <div class="action-shop_icon">
+          <iron-icon icon="icons:close"></iron-icon>
+          <iron-icon icon="icons:create"></iron-icon>
+          <iron-icon icon="image:remove-red-eye"></iron-icon>
+        </div>
+      </div>
+    </div>
+    <div elevation="1" class="list-detail_body">
+      <div class="list-detail_detail-shop">
+        <div class="detail-shop_lastvisit">Last Visit:</div>
+        <div class="detail-shop_visitor">Visitor Ali Ramezani</div>
+        <div class="detail-shop_day">2 day ago</div>
+      </div>
+    </div>
 
-	</template>
+  </template>
 
-	<script type="text/javascript" src="list-detail.js"></script>
+  <script type="text/javascript" src="list-detail.js"></script>
 </dom-module>
