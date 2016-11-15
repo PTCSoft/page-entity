@@ -1,49 +1,49 @@
 {
   "name": "list-detail",
   "authors": [
-		"PTC Corporation <info@ptc.co.ir>"
-	],
+    "PTC Corporation <info@ptc.co.ir>"
+  ],
   "description": "iOrder PWA Elements List Detail",
   "main": "list-detail.html",
   "keywords": [
-		"ptc",
-		"polymer",
-		"iorder",
-		"element",
-		"pwa",
-		"list",
-		"detail"
-	],
+    "ptc",
+    "polymer",
+    "iorder",
+    "element",
+    "pwa",
+    "list",
+    "detail"
+  ],
   "license": "Copyright © 2016 PTC Corporation, All rights reserved",
   "homepage": "https://github.com/PTCSoft/#",
   "private": true,
   "ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
-	],
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "polymer": "Polymer/polymer#2.0-preview",
-		"paper-input": "PolymerElements/paper-input#2.0-preview",
-		"iron-icon": "PolymerElements/iron-icon#2.0-preview",
-		"paper-checkbox": "PolymerElements/paper-checkbox#2.0-preview",
-		"paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#2.0-preview",
-		"paper-listbox": "polymerelements/paper-listbox#2.0-preview",
-		"paper-item": "PolymerElements/paper-item#2.0-preview",
-		"paper-button": "PolymerElements/paper-button#2.0-preview",
-		"iron-component-page": "PolymerElements/iron-component-page#2.0-preview",
-		"iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
-		"paper-material": "PolymerElements/paper-material#2.0-preview",
-		"iron-iconset-svg": "PolymerElements/iron-iconset-svg#2.0-preview"
+    "paper-input": "PolymerElements/paper-input#2.0-preview",
+    "iron-icon": "PolymerElements/iron-icon#2.0-preview",
+    "paper-checkbox": "PolymerElements/paper-checkbox#2.0-preview",
+    "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#2.0-preview",
+    "paper-listbox": "polymerelements/paper-listbox#2.0-preview",
+    "paper-item": "PolymerElements/paper-item#2.0-preview",
+    "paper-button": "PolymerElements/paper-button#2.0-preview",
+    "iron-component-page": "PolymerElements/iron-component-page#2.0-preview",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
+    "paper-material": "PolymerElements/paper-material#2.0-preview",
+    "iron-iconset-svg": "PolymerElements/iron-iconset-svg#2.0-preview"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
     "web-component-tester": "^4.0.0"
   },
-	"resolutions": {
-		"webcomponentsjs": "v1"
-	}
+  "resolutions": {
+    "webcomponentsjs": "v1"
+  }
 }
