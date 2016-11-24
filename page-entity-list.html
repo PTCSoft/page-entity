@@ -10,11 +10,12 @@
       }
     </style>
 
-    <iron-ajax url="data/data.json" last-response="{{data}}" auto></iron-ajax>
+    <iron-ajax url="shopdata.json" last-response="{{data}}" auto></iron-ajax>
 
     <iron-list items="[[data]]" as="item">
       <template>
-			</template>
+        [[item.erp]]
+      </template>
     </iron-list>
   </template>
 
