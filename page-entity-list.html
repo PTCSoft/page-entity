@@ -2,6 +2,13 @@
 <link rel="import" href="../iron-ajax/iron-ajax.html"/>
 <link rel="import" href="../iron-list/iron-list.html" />
 
+<!--
+`page-entity`
+
+
+@demo demo/page-entity-list.html
+-->
+
 <dom-module id="page-entity-list">
   <template>
     <style>
@@ -10,9 +17,13 @@
       }
     </style>
 
-    <iron-ajax url="shopdata.json" last-response="{{data}}" auto></iron-ajax>
+    <iron-ajax
+      auto
+      url="shopdata.json"
+      handle-as="json"
+      last-response="{{shopdata}}"></iron-ajax>
 
-    <iron-list items="[[data]]" as="item">
+    <iron-list items="[[shopdata]]" as="item">
       <template>
         [[item.erp]]
       </template>
