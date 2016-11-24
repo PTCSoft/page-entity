@@ -11,6 +11,11 @@
     </style>
 
     <iron-ajax url="data/data.json" last-response="{{data}}" auto></iron-ajax>
+
+    <iron-list items="[[data]]" as="item">
+      <template>
+			</template>
+    </iron-list>
   </template>
 
   <script  type="text/javascript" src="page-entity-list.js"></script>
