@@ -1,4 +1,4 @@
-# \<list-detail\>
+# \<page-entity\>
 
 
 
