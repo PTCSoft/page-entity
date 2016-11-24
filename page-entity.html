@@ -1,10 +1,10 @@
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../bower_components/polymer/polymer-element.html"/>
 
 <!--
 `page-entity`
 
 
-@demo demo/index.html 
+@demo demo/index.html
 -->
 
 <dom-module id="page-entity">
@@ -17,18 +17,5 @@
     <h2>Hello [[prop1]]</h2>
   </template>
 
-  <script>
-    Polymer({
-
-      is: 'page-entity',
-
-      properties: {
-        prop1: {
-          type: String,
-          value: 'page-entity',
-        },
-      },
-
-    });
-  </script>
+  <script type="text/javascript" src="page-entity.js"></script>
 </dom-module>
