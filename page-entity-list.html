@@ -14,12 +14,17 @@
     <style>
       :host {
         display: block;
+        color: #000000;
+      }
+
+      iron-list {
+        border: 1px solid;
       }
     </style>
 
     <iron-ajax
       auto
-      url="shopdata.json"
+      url="../../shopdata.json"
       handle-as="json"
       last-response="{{shopdata}}"></iron-ajax>
 
