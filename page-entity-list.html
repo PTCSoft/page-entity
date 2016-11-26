@@ -28,24 +28,34 @@
 
       .container {
         /*@apply --layout-horizontal;*/
-        height: 7px;
+        @apply(--layout-vertical);
+        height: 500px;
+        direction: rtl;
       }
 
       .hitems {
-        @apply --layout-horizontal-reverse;
+        @apply --layout-horizontal;
         background-color: #b0cdff;
         color: #0c182a;
         border: 1px dotted #161c22;
       }
 
       .items {
-        padding: 10px;
 
       }
       .itemcontainer{
-        @apply --layout-horizontal-reverse;
+        @apply --layout-horizontal;
+        margin-right: 100px;
+        border-bottom: 1px dotted #343434;
       }
       .listitems{
+
+      }
+      .itemcontainer:hover{
+        background-color: rgba(121, 121, 121, 0.5);
+      }
+      .listitems , .items{
+        width: 80px;
         padding: 10px;
       }
 
@@ -83,7 +93,7 @@
           </div>
         </div>
       </div>
-    </div>
+
     <template is="dom-repeat" items="[[shopdata]]">
 
          <div class="itemcontainer">
@@ -108,6 +118,7 @@
         </div>
 
     </template>
+</div>
     <!--</iron-list>-->
     </template>
     <script type="text/javascript" src="page-entity-list.js"></script>
