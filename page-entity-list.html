@@ -4,6 +4,8 @@
 <link rel="import" href="../paper-icon-button/paper-icon-button.html" />
 <link rel="import" href="../paper-checkbox/paper-checkbox.html" />
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html" />
+<link rel="import" href="../paper-style/color.html" />
+
 
 <link rel="import" href="app-icons.html" />
 
@@ -23,7 +25,6 @@
       }
 
       .container {
-        @apply --layout-vertical;
         height: 100vh;
         direction: rtl;
       }
@@ -32,21 +33,32 @@
         direction: ltr;
       }
 
-      .hitems {
-        @apply --layout-horizontal;
+      .list-title {
+        background-color: var(--paper-blue-500);
+        color: var(--paper-blue-grey-50);
+        padding: 10px 0;
       }
 
       .itemcontainer {
-        @apply --layout-horizontal;
         border-bottom: 1px dotted #343434;
+        padding: 10px 0;
       }
 
       .itemcontainer:hover {
         background-color: rgba(121, 121, 121, 0.5);
       }
 
+      .vertical {
+        @apply --layout-vertical;
+      }
+
+      .horizontal {
+        @apply --layout-horizontal;
+      }
+
       .flexchild {
         @apply --layout-flex;
+        @apply --layout-center;
       }
 
     </style>
@@ -58,51 +70,51 @@
       last-response="{{shopdata}}"></iron-ajax>
 
     <!--<iron-list items="[[shopdata]]" as="item">-->
-    <div class="container">
-      <div class="hitems">
-        <div class="flexchild">
+    <div class="container vertical">
+      <div class="list-title horizontal">
+        <div class="flexchild horizontal">
           <paper-icon-button icon="move-vert"></paper-icon-button>
         </div>
-        <div class="flexchild">
+        <div class="flexchild horizontal">
           <paper-checkbox></paper-checkbox>
         </div>
-        <div class="flexchild">
+        <div class="flexchild horizontal">
           نام فروشگاه
         </div>
-        <div class="flexchild">
+        <div class="flexchild horizontal">
           نام مشتری
         </div>
-        <div class="flexchild" dir="rtl">
+        <div class="flexchild horizontal" dir="rtl">
           کد ERP
         </div>
-        <div class="flexchild">
+        <div class="flexchild horizontal">
           تاریخ آخرین ویزیت
         </div>
-        <div class="flexchild">
+        <div class="flexchild horizontal">
           تلفن
         </div>
       </div>
       <template is="dom-repeat" items="[[shopdata]]">
-        <div class="itemcontainer">
-          <div class="flexchild">
+        <div class="itemcontainer horizontal">
+          <div class="flexchild horizontal">
             <paper-icon-button icon="move-vert"></paper-icon-button>
           </div>
-          <div class="flexchild">
+          <div class="flexchild horizontal">
             <paper-checkbox></paper-checkbox>
           </div>
-          <div class="flexchild">
+          <div class="flexchild horizontal">
             [[item.shopname]]
           </div>
-          <div class="flexchild">
+          <div class="flexchild horizontal">
             [[item.customername]]
           </div>
-          <div class="flexchild">
+          <div class="flexchild horizontal">
             [[item.erp]]
           </div>
-          <div class="flexchild">
+          <div class="flexchild horizontal">
             [[item.date]]
           </div>
-          <div class="flexchild">
+          <div class="flexchild horizontal">
             [[item.phone]]
           </div><br/>
         </div>
