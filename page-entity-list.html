@@ -15,48 +15,38 @@
 -->
 
 <dom-module id="page-entity-list">
-    <template>
+  <template>
     <style>
       :host {
         display: block;
         color: #000000;
       }
 
-      iron-list {
-        border: 1px solid;
-      }
-
       .container {
-        /*@apply --layout-horizontal;*/
-        @apply(--layout-vertical);
+        @apply --layout-vertical;
         height: 500px;
         direction: rtl;
       }
 
+      paper-checkbox {
+        direction: ltr;
+      }
+
       .hitems {
         @apply --layout-horizontal;
-        background-color: #b0cdff;
-        color: #0c182a;
-        border: 1px dotted #161c22;
       }
 
-      .items {
-
-      }
-      .itemcontainer{
+      .itemcontainer {
         @apply --layout-horizontal;
-        margin-right: 100px;
         border-bottom: 1px dotted #343434;
       }
-      .listitems{
 
-      }
-      .itemcontainer:hover{
+      .itemcontainer:hover {
         background-color: rgba(121, 121, 121, 0.5);
       }
-      .listitems , .items{
-        width: 80px;
-        padding: 10px;
+
+      .flexchild {
+        @apply(--layout-flex);
       }
 
     </style>
@@ -66,60 +56,60 @@
       url="../../shopdata.json"
       handle-as="json"
       last-response="{{shopdata}}"></iron-ajax>
+
     <!--<iron-list items="[[shopdata]]" as="item">-->
     <div class="container">
-      <div class="header" >
-        <div class="hitems">
-          <div class="items">
-            <paper-icon-button icon="move-vert"></paper-icon-button>
-          </div>
-          <div class="items">
-            <paper-checkbox></paper-checkbox>
-          </div>
-          <div class="items">
-            نام فروشگاه
-          </div>
-          <div class="items">
-            نام مشتری
-          </div>
-          <div class="items" dir="rtl">
-            کد ERP
-          </div>
-          <div class="items">
-            تاریخ آخرین ویزیت
-          </div>
-          <div class="items">
-            تلفن
-          </div>
+      <div class="hitems">
+        <div class="flexchild">
+          <paper-icon-button icon="move-vert"></paper-icon-button>
+        </div>
+        <div class="flexchild">
+          <paper-checkbox></paper-checkbox>
+        </div>
+        <div class="flexchild">
+          نام فروشگاه
+        </div>
+        <div class="flexchild">
+          نام مشتری
+        </div>
+        <div class="flexchild" dir="rtl">
+          کد ERP
+        </div>
+        <div class="flexchild">
+          تاریخ آخرین ویزیت
+        </div>
+        <div class="flexchild">
+          تلفن
         </div>
       </div>
-
-    <template is="dom-repeat" items="[[shopdata]]">
-
-         <div class="itemcontainer">
-          <div class="listitems">
+      <template is="dom-repeat" items="[[shopdata]]">
+        <div class="itemcontainer">
+          <div class="flexchild">
+            <paper-icon-button icon="move-vert"></paper-icon-button>
+          </div>
+          <div class="flexchild">
             <paper-checkbox></paper-checkbox>
           </div>
-          <div class="listitems">
+          <div class="flexchild">
             [[item.shopname]]
           </div>
-          <div class="listitems">
+          <div class="flexchild">
             [[item.customername]]
           </div>
-          <div class="listitems">
+          <div class="flexchild">
             [[item.erp]]
           </div>
-          <div class="listitems">
+          <div class="flexchild">
             [[item.data]]
           </div>
-          <div class="listitems">
+          <div class="flexchild">
             [[item.phone]]
           </div><br/>
         </div>
-
-    </template>
-</div>
+      </template>
+    </div>
     <!--</iron-list>-->
-    </template>
-    <script type="text/javascript" src="page-entity-list.js"></script>
+  </template>
+
+  <script type="text/javascript" src="page-entity-list.js"></script>
 </dom-module>
