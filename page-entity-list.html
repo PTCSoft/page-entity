@@ -42,6 +42,12 @@
         padding: 10px;
 
       }
+      .itemcontainer{
+        @apply --layout-horizontal-reverse;
+      }
+      .listitems{
+        padding: 10px;
+      }
 
     </style>
 
@@ -79,7 +85,28 @@
       </div>
     </div>
     <template is="dom-repeat" items="[[shopdata]]">
-      [[item.index]]
+
+         <div class="itemcontainer">
+          <div class="listitems">
+            <paper-checkbox></paper-checkbox>
+          </div>
+          <div class="listitems">
+            [[item.shopname]]
+          </div>
+          <div class="listitems">
+            [[item.customername]]
+          </div>
+          <div class="listitems">
+            [[item.erp]]
+          </div>
+          <div class="listitems">
+            [[item.data]]
+          </div>
+          <div class="listitems">
+            [[item.phone]]
+          </div><br/>
+        </div>
+
     </template>
     <!--</iron-list>-->
     </template>
