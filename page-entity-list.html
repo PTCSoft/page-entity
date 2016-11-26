@@ -1,6 +1,11 @@
 <link rel="import" href="../polymer/polymer-element.html" />
 <link rel="import" href="../iron-ajax/iron-ajax.html" />
 <link rel="import" href="../iron-list/iron-list.html" />
+<link rel="import" href="../paper-icon-button/paper-icon-button.html" />
+<link rel="import" href="../paper-checkbox/paper-checkbox.html" />
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html" />
+
+<link rel="import" href="app-icons.html" />
 
 <!--
 `page-entity`
@@ -20,6 +25,24 @@
       iron-list {
         border: 1px solid;
       }
+
+      .container {
+        /*@apply --layout-horizontal;*/
+        height: 7px;
+      }
+
+      .hitems {
+        @apply --layout-horizontal-reverse;
+        background-color: #b0cdff;
+        color: #0c182a;
+        border: 1px dotted #161c22;
+      }
+
+      .items {
+        padding: 10px;
+
+      }
+
     </style>
 
     <iron-ajax
@@ -28,10 +51,36 @@
       handle-as="json"
       last-response="{{shopdata}}"></iron-ajax>
     <!--<iron-list items="[[shopdata]]" as="item">-->
-      <template is="dom-repeat" items="[[shopdata]]">
-
-        [[item.index]]
-      </template>
+    <div class="container">
+      <div class="header" >
+        <div class="hitems">
+          <div class="items">
+            <paper-icon-button icon="move-vert"></paper-icon-button>
+          </div>
+          <div class="items">
+            <paper-checkbox></paper-checkbox>
+          </div>
+          <div class="items">
+            نام فروشگاه
+          </div>
+          <div class="items">
+            نام مشتری
+          </div>
+          <div class="items" dir="rtl">
+            کد ERP
+          </div>
+          <div class="items">
+            تاریخ آخرین ویزیت
+          </div>
+          <div class="items">
+            تلفن
+          </div>
+        </div>
+      </div>
+    </div>
+    <template is="dom-repeat" items="[[shopdata]]">
+      [[item.index]]
+    </template>
     <!--</iron-list>-->
     </template>
     <script type="text/javascript" src="page-entity-list.js"></script>
