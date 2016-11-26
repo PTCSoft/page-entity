@@ -1,5 +1,5 @@
-<link rel="import" href="../polymer/polymer-element.html"/>
-<link rel="import" href="../iron-ajax/iron-ajax.html"/>
+<link rel="import" href="../polymer/polymer-element.html" />
+<link rel="import" href="../iron-ajax/iron-ajax.html" />
 <link rel="import" href="../iron-list/iron-list.html" />
 
 <!--
@@ -10,7 +10,7 @@
 -->
 
 <dom-module id="page-entity-list">
-  <template>
+    <template>
     <style>
       :host {
         display: block;
@@ -27,13 +27,12 @@
       url="../../shopdata.json"
       handle-as="json"
       last-response="{{shopdata}}"></iron-ajax>
+    <!--<iron-list items="[[shopdata]]" as="item">-->
+      <template is="dom-repeat" items="[[shopdata]]">
 
-    <iron-list items="[[shopdata]]" as="item">
-      <template>
-        [[item.erp]]
+        [[item.index]]
       </template>
-    </iron-list>
-  </template>
-
-  <script  type="text/javascript" src="page-entity-list.js"></script>
+    <!--</iron-list>-->
+    </template>
+    <script type="text/javascript" src="page-entity-list.js"></script>
 </dom-module>
