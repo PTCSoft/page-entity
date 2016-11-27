@@ -1,9 +1,10 @@
 <link rel="import" href="../polymer/polymer-element.html"/>
 <link rel="import" href="../iron-ajax/iron-ajax.html"/>
-<link rel="import" href="../paper-icon-button/paper-icon-button.html"/>
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html"/>
-<link rel="import" href="../paper-style/color.html"/>
+<link rel="import" href="../paper-styles/color.html"/>
 <link rel="import" href="../app-route/app-route.html"/>
+<link rel="import" href="../iron-image/iron-image.html"/>
+<link rel="import" href="../iron-icon/iron-icon.html"/>
 
 
 <link rel="import" href="app-icons.html"/>
@@ -37,6 +38,30 @@ Custom property        | Description                                 | Default
       route="{{route}}"
       pattern="/:index"
       data="{{routeData}}"></app-route>
+
+    <div class="list-detail_image-shop">
+      <iron-image src=""></iron-image>
+    </div>
+
+    <div elevation="1" class="list-detail_body">
+      <div class="list-detail_action-shop layout horizontal justified">
+        <div class="action-shop_shop-name">
+          <span>[[shopname]]</span>
+        </div>
+        <div class="action-shop_icon">
+          <iron-icon icon="icons:close"></iron-icon>
+          <iron-icon icon="icons:create"></iron-icon>
+          <iron-icon icon="image:remove-red-eye"></iron-icon>
+        </div>
+      </div>
+    </div>
+    <div elevation="1" class="list-detail_body">
+      <div class="list-detail_detail-shop">
+        <div class="detail-shop_lastvisit">آخرین ویزیت:</div>
+        <div class="detail-shop_visitor">[[customername]]</div>
+        <div class="detail-shop_day">[[date]]</div>
+      </div>
+    </div>
 
   </template>
 
