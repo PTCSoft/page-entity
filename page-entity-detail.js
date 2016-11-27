@@ -1,16 +1,21 @@
 (function (){
-	'use strict';
+  'use strict';
 
-	class PageEntityDetail extends Polymer.Element {
-		static get is () { return 'page-entity-detail'; }
+  class PageEntityDetail extends Polymer.Element {
+    static get is () { return 'page-entity-detail'; }
 
-		static get config () {
-			return {
-				properties: {
-				}
-			};
-		} // end config
-	}
+    static get config () {
+      return {
+        properties: {
 
-	customElements.define(PageEntityDetail.is, PageEntityDetail);
+          //for get id
+          route : {
+            type : Object,
+          }
+        }
+      };
+    } // end config
+  }
+
+  customElements.define(PageEntityDetail.is, PageEntityDetail);
 })();
