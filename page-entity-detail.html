@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html"/>
+<link rel="import" href="../iron-ajax/iron-ajax.html"/>
+<link rel="import" href="../paper-icon-button/paper-icon-button.html"/>
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html"/>
+<link rel="import" href="../paper-style/color.html"/>
+<link rel="import" href="../app-route/app-route.html"/>
+
+
+<link rel="import" href="app-icons.html"/>
+
+<!--
+`page-entity-detail`
+
+
+@demo demo/page-entity-detail.html
+-->
+
+<dom-module id="page-entity-detail">
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        --primary-text-color : var(--paper-blue-500);
+      }
+    </style>
+
+    <app-route
+        route="{{route}}"
+        pattern="/:page"
+        data="{{routeData}}"
+        tail="{{subroute}}"></app-route>
+  </template>
+
+  <script type="text/javascript" src="page-entity-detail.js"></script>
+</dom-module>
