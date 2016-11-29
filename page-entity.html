@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer-element.html"/>
 <link rel="import" href="../app-route/app-route.html"/>
+<link rel="import" href="../app-layout/app-drawer/app-drawer.html"/>
 
 <link rel="import" href="page-entity-list.html"/>
 
@@ -36,7 +37,9 @@
 
     <div class="horizontal">
       <page-entity-list class="flexchild" on-sendindex="send"></page-entity-list>
-      <page-entity-detail indexnumber="[[indexnumber]]"></page-entity-detail>
+      <app-drawer swipe-open>
+        <page-entity-detail indexnumber="[[indexnumber]]"></page-entity-detail>
+      </app-drawer>
     </div>
   </template>
 
