@@ -24,9 +24,32 @@
             value: 1
           },
 
-        }
+          dataid : {
+            type : Object,
+          }
+
+        },
+
+        observers : [
+          'getid(routeData.index)'
+        ],
       };
     } // end config
+
+    getid (index) {
+
+      if (index == undefined) {
+        return false;
+      }
+
+      index = Number(index);
+      if (isNaN(index)){
+        return false;
+      }
+
+      var dataid = this.$.meta.byKey('data');
+      this.data = dataid ? dataid[index]: null;
+    }
   }
 
   customElements.define(PageEntityDetail.is, PageEntityDetail);
