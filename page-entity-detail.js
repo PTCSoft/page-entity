@@ -37,7 +37,7 @@
     } // end config
 
     getid (index) {
-
+      console.log('get id');
       if (index == undefined) {
         return false;
       }
