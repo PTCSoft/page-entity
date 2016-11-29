@@ -8,10 +8,14 @@
       return {
         properties: {
 
-          //for get id
-          route : {
-            type : Object,
+          indexnumber: {
+            type: Number,
           },
+
+          //for get id
+          // route : {
+          //   type : Object,
+          // },
 
           /**
           * The z-depth of this element, from 0-5. Setting to 0 will remove the
@@ -31,13 +35,15 @@
         },
 
         observers : [
-          'getid(routeData.index)'
+          // 'getid(routeData.index)'
+          'getid(indexnumber)'
         ],
       };
     } // end config
 
     getid (index) {
       console.log('get id');
+      console.log('index' + index);
       if (index == undefined) {
         console.log('index == undefined   return false');
         return false;
