@@ -6,6 +6,8 @@
 <link rel="import" href="../iron-image/iron-image.html"/>
 <link rel="import" href="../iron-icon/iron-icon.html"/>
 <link rel="import" href="../iron-meta/iron-meta.html"/>
+<link rel="import" href="../paper-material/paper-material.html"/>
+<link rel="import" href="../paper-styles/typography.html"/>
 
 
 <link rel="import" href="app-icons.html"/>
@@ -32,6 +34,34 @@ Custom property        | Description                                 | Default
         display: block;
 
         --primary-text-color : var(--paper-blue-500);
+         @apply(--page-entity-detail);
+      }
+
+      .list-detail_image-shop iron-image {
+        width: 100%;
+        height: 200px;
+      }
+
+      .list-detail_body {
+        padding: 20px;
+        border-bottom: 1px solid var(--paper-grey-300);
+      }
+
+      .action-shop_shop-name {
+        @apply(--paper-font-title);
+      }
+
+      .detail-shop_visitor, .detail-shop_day {
+        @apply(--paper-font-caption);
+        margin: 4px 0;
+      }
+
+      .detail-shop_day {
+        color: var(--paper-grey-500);
+      }
+
+      .detail-shop_lastvisit {
+        @apply(--paper-font-body2);
       }
     </style>
 
