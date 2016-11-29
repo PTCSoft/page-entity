@@ -20,7 +20,12 @@
       this.dataindex = event.model.item.index;
       console.log('dataindex(ID) : ' + this.dataindex);
 
-      this.fire('sendindex', this.dataindex);
+      // this.fire('sendindex', this.dataindex);
+      var event = new CustomEvent("sendindex", {
+        // detail: {
+        //   this.dataindex = event.model.item.index;
+        // }
+      });
 
       console.log('************ TAP **************');
     }
