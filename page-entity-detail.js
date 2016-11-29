@@ -39,15 +39,18 @@
     getid (index) {
       console.log('get id');
       if (index == undefined) {
+        console.log('index == undefined   return false');
         return false;
       }
 
       index = Number(index);
       if (isNaN(index)){
+        console.log('isNaN(index)   return false');
         return false;
       }
 
       var dataid = this.$.meta.byKey('data');
+      console.log(dataid);
       this.data = dataid ? dataid[index]: null;
     }
   }
