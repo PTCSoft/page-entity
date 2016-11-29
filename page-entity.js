@@ -14,15 +14,15 @@
      send (event) {
       console.log('************ SEND *************');
 
-      // console.log('routeData ' + this.routeData.page);
-      // console.log('route.path ' + this.route.path);
+      console.log('routeData ' + this.routeData.page);
+      console.log('route.path ' + this.route.path);
 
       this.set('route.path', route.path + event.detail);
 
-      // console.log('route.path ' + this.route.path);
-      // console.log('subroute ' + this.subroute.path);
+      console.log('route.path ' + this.route.path);
+      console.log('subroute ' + this.subroute.path);
 
-      // console.log('************ SEND *************');
+      console.log('************ SEND *************');
     }
   }
 
