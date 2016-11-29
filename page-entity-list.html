@@ -26,11 +26,12 @@
         display: block;
 
         --primary-text-color : var(--paper-blue-500);
+        direction: rtl;
       }
 
       .container {
         height: 100vh;
-        direction: rtl;
+        /*direction: rtl;*/
       }
 
       paper-checkbox {
@@ -102,59 +103,63 @@
     <iron-meta key="data" value="{{shopdata}}"></iron-meta>
 
     <!--<iron-list items="[[shopdata]]" as="item">-->
-    <div class="container vertical">
-      <div class="list-title horizontal">
-        <div class="">
-          <paper-icon-button icon="more-vert"></paper-icon-button>
-        </div>
-        <div class="icon">
-          <paper-checkbox></paper-checkbox>
-        </div>
-        <div class="flexchild horizontal">
-          نام فروشگاه
-        </div>
-        <div class="flexchild horizontal">
-          نام مشتری
-        </div>
-        <div class="flexchild horizontal" dir="rtl">
-          کد ERP
-        </div>
-        <div class="flexchild horizontal">
-          تاریخ آخرین ویزیت
-        </div>
-        <div class="flexchild horizontal">
-          تلفن
+    <div class="horizontal">
+      <div class="flexchild">
+        <div class="container vertical">
+          <div class="list-title horizontal">
+            <div class="">
+              <paper-icon-button icon="more-vert"></paper-icon-button>
+            </div>
+            <div class="icon">
+              <paper-checkbox></paper-checkbox>
+            </div>
+            <div class="flexchild horizontal">
+              نام فروشگاه
+            </div>
+            <div class="flexchild horizontal">
+              نام مشتری
+            </div>
+            <div class="flexchild horizontal" dir="rtl">
+              کد ERP
+            </div>
+            <div class="flexchild horizontal">
+              تاریخ آخرین ویزیت
+            </div>
+            <div class="flexchild horizontal">
+              تلفن
+            </div>
+          </div>
+          <template is="dom-repeat" items="[[shopdata]]">
+            <div on-click="tap" class="itemcontainer horizontal">
+              <div class="">
+                <paper-icon-button icon="create"></paper-icon-button>
+              </div>
+              <div class="icon">
+                <paper-checkbox></paper-checkbox>
+              </div>
+              <div class="flexchild horizontal">
+                [[item.shopname]]
+              </div>
+              <div class="flexchild horizontal">
+                [[item.customername]]
+              </div>
+              <div class="flexchild horizontal">
+                [[item.erp]]
+              </div>
+              <div class="flexchild horizontal">
+                [[item.date]]
+              </div>
+              <div class="flexchild horizontal">
+                [[item.phone]]
+              </div><br/>
+            </div>
+          </template>
         </div>
       </div>
-      <template is="dom-repeat" items="[[shopdata]]">
-        <div on-click="tap" class="itemcontainer horizontal">
-          <div class="">
-            <paper-icon-button icon="create"></paper-icon-button>
-          </div>
-          <div class="icon">
-            <paper-checkbox></paper-checkbox>
-          </div>
-          <div class="flexchild horizontal">
-            [[item.shopname]]
-          </div>
-          <div class="flexchild horizontal">
-            [[item.customername]]
-          </div>
-          <div class="flexchild horizontal">
-            [[item.erp]]
-          </div>
-          <div class="flexchild horizontal">
-            [[item.date]]
-          </div>
-          <div class="flexchild horizontal">
-            [[item.phone]]
-          </div><br/>
-        </div>
-      </template>
-    </div>
-    <!--</iron-list>-->
+      <!--</iron-list>-->
 
-    <page-entity-detail route="{{subroute}}"></page-entity-detail>
+      <page-entity-detail route="{{subroute}}"></page-entity-detail>
+    </div>
   </template>
 
   <script type="text/javascript" src="page-entity-list.js"></script>
