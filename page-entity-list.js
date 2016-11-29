@@ -15,14 +15,14 @@
     } // end config
 
     tap (event) {
-      // console.log('************ TAP **************');
+      console.log('************ TAP **************');
 
       this.dataindex = event.model.item.index;
-      // console.log('dataindex(ID) : ' + this.dataindex);
+      console.log('dataindex(ID) : ' + this.dataindex);
 
       this.fire('sendindex', this.dataindex);
 
-      // console.log('************ TAP **************');
+      console.log('************ TAP **************');
     }
   }
 
