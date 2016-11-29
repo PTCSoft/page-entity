@@ -14,7 +14,10 @@
       };
     } // end config
 
-     send (event) {
+    send (event) {
+      var appdrawer = this.shadowRoot.querySelector('app-drawer');
+      appdrawer.setAttribute('opened', true);
+
       console.log('************ SEND *************');
 
       // console.log('routeData ' + this.routeData.page);
