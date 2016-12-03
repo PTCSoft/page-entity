@@ -24,7 +24,8 @@
     "iron-iconset-svg": "PolymerElements/iron-iconset-svg#2.0-preview",
     "iron-iconset": "PolymerElements/iron-iconset#2.0-preview",
     "paper-checkbox": "PolymerElements/paper-checkbox#2.0-preview",
-    "iron-flex-layout": "PolymerElements/iron-flex-layout#2.0-preview"
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#2.0-preview",
+    "iron-image": "PolymerElements/iron-image#2.0-preview"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

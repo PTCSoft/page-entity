@@ -4,10 +4,13 @@
 <link rel="import" href="../paper-icon-button/paper-icon-button.html" />
 <link rel="import" href="../paper-checkbox/paper-checkbox.html" />
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html" />
-<link rel="import" href="../paper-style/color.html" />
+<link rel="import" href="../paper-styles/color.html" />
+<link rel="import" href="../app-route/app-route.html"/>
+<link rel="import" href="../iron-meta/iron-meta.html"/>
 
 
 <link rel="import" href="app-icons.html" />
+<link rel="import" href="page-entity-detail.html"/>
 
 <!--
 `page-entity`
@@ -23,11 +26,12 @@
         display: block;
 
         --primary-text-color : var(--paper-blue-500);
+        direction: rtl;
       }
 
       .container {
         height: 100vh;
-        direction: rtl;
+        /*direction: rtl;*/
       }
 
       paper-checkbox {
@@ -96,58 +100,66 @@
       handle-as="json"
       last-response="{{shopdata}}"></iron-ajax>
 
+    <iron-meta key="data" value="{{shopdata}}"></iron-meta>
+
     <!--<iron-list items="[[shopdata]]" as="item">-->
-    <div class="container vertical">
-      <div class="list-title horizontal">
-        <div class="">
-          <paper-icon-button icon="more-vert"></paper-icon-button>
-        </div>
-        <div class="icon">
-          <paper-checkbox></paper-checkbox>
-        </div>
-        <div class="flexchild horizontal">
-          نام فروشگاه
-        </div>
-        <div class="flexchild horizontal">
-          نام مشتری
-        </div>
-        <div class="flexchild horizontal" dir="rtl">
-          کد ERP
-        </div>
-        <div class="flexchild horizontal">
-          تاریخ آخرین ویزیت
-        </div>
-        <div class="flexchild horizontal">
-          تلفن
-        </div>
-      </div>
-      <template is="dom-repeat" items="[[shopdata]]">
-        <div class="itemcontainer horizontal">
-          <div class="">
-            <paper-icon-button icon="create"></paper-icon-button>
+    <!--<div class="horizontal">
+      <div class="flexchild">-->
+        <div class="container vertical">
+          <div class="list-title horizontal">
+            <div class="">
+              <paper-icon-button icon="more-vert"></paper-icon-button>
+            </div>
+            <div class="icon">
+              <paper-checkbox></paper-checkbox>
+            </div>
+            <div class="flexchild horizontal">
+              نام فروشگاه
+            </div>
+            <div class="flexchild horizontal">
+              نام مشتری
+            </div>
+            <div class="flexchild horizontal" dir="rtl">
+              کد ERP
+            </div>
+            <div class="flexchild horizontal">
+              تاریخ آخرین ویزیت
+            </div>
+            <div class="flexchild horizontal">
+              تلفن
+            </div>
           </div>
-          <div class="icon">
-            <paper-checkbox></paper-checkbox>
-          </div>
-          <div class="flexchild horizontal">
-            [[item.shopname]]
-          </div>
-          <div class="flexchild horizontal">
-            [[item.customername]]
-          </div>
-          <div class="flexchild horizontal">
-            [[item.erp]]
-          </div>
-          <div class="flexchild horizontal">
-            [[item.date]]
-          </div>
-          <div class="flexchild horizontal">
-            [[item.phone]]
-          </div><br/>
+          <template is="dom-repeat" items="[[shopdata]]">
+            <div on-click="tap" class="itemcontainer horizontal">
+              <div class="">
+                <paper-icon-button icon="create"></paper-icon-button>
+              </div>
+              <div class="icon">
+                <paper-checkbox></paper-checkbox>
+              </div>
+              <div class="flexchild horizontal">
+                [[item.shopname]]
+              </div>
+              <div class="flexchild horizontal">
+                [[item.customername]]
+              </div>
+              <div class="flexchild horizontal">
+                [[item.erp]]
+              </div>
+              <div class="flexchild horizontal">
+                [[item.date]]
+              </div>
+              <div class="flexchild horizontal">
+                [[item.phone]]
+              </div><br/>
+            </div>
+          </template>
         </div>
-      </template>
-    </div>
-    <!--</iron-list>-->
+      <!--</div>-->
+      <!--</iron-list>-->
+
+      <!--<page-entity-detail route="{{subroute}}"></page-entity-detail>
+    </div>-->
   </template>
 
   <script type="text/javascript" src="page-entity-list.js"></script>
