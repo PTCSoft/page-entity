@@ -14,10 +14,12 @@
       };
     } // end config
 
-    send (event) {
+    opendraw () {
       var appdrawer = this.shadowRoot.querySelector('app-drawer');
       appdrawer.setAttribute('opened', true);
+    }
 
+    send (event) {
       console.log('************ SEND *************');
 
       // console.log('routeData ' + this.routeData.page);
@@ -38,9 +40,14 @@
 
       var pel = this.shadowRoot.querySelector('page-entity-detail');
 
+      pel.addEventListener("showdrawer", function(e) {
+        // console.info("Event is: ", e);
+        // console.info("Custom data is: ", e.detail);
+      });
+
       pel.addEventListener("sendindex", function(e) {
-        console.info("Event is: ", e);
-        console.info("Custom data is: ", e.detail);
+        // console.info("Event is: ", e);
+        // console.info("Custom data is: ", e.detail);
       });
     }
   }
