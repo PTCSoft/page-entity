@@ -105,56 +105,58 @@
     <!--<iron-list items="[[shopdata]]" as="item">-->
     <!--<div class="horizontal">
       <div class="flexchild">-->
-        <div class="container vertical">
-          <div class="list-title horizontal">
-            <div class="">
-              <paper-icon-button icon="more-vert"></paper-icon-button>
-            </div>
-            <div class="icon">
-              <paper-checkbox></paper-checkbox>
+    <div class="container vertical">
+      <div class="list-title horizontal">
+        <div class="">
+          <paper-icon-button icon="more-vert"></paper-icon-button>
+        </div>
+        <div class="icon">
+          <paper-checkbox></paper-checkbox>
+        </div>
+        <div class="flexchild horizontal">
+          نام فروشگاه
+        </div>
+        <div class="flexchild horizontal">
+          نام مشتری
+        </div>
+        <div class="flexchild horizontal" dir="rtl">
+          کد ERP
+        </div>
+        <div class="flexchild horizontal">
+          تاریخ آخرین ویزیت
+        </div>
+        <div class="flexchild horizontal">
+          تلفن
+        </div>
+      </div>
+      <template is="dom-repeat" items="[[shopdata]]">
+        <div on-click="tap" class="itemcontainer horizontal">
+          <div>
+            <paper-icon-button icon="create"></paper-icon-button>
+          </div>
+          <div class="icon">
+            <paper-checkbox></paper-checkbox>
+          </div>
+          <div on-click="showdraw" class="flexchild horizontal">
+            <div class="flexchild horizontal">
+              [[item.shopname]]
             </div>
             <div class="flexchild horizontal">
-              نام فروشگاه
+              [[item.customername]]
             </div>
             <div class="flexchild horizontal">
-              نام مشتری
-            </div>
-            <div class="flexchild horizontal" dir="rtl">
-              کد ERP
+              [[item.erp]]
             </div>
             <div class="flexchild horizontal">
-              تاریخ آخرین ویزیت
+              [[item.date]]
             </div>
             <div class="flexchild horizontal">
-              تلفن
+              [[item.phone]]
             </div>
           </div>
-          <template is="dom-repeat" items="[[shopdata]]">
-            <div on-click="tap" class="itemcontainer horizontal">
-              <div class="">
-                <paper-icon-button icon="create"></paper-icon-button>
-              </div>
-              <div class="icon">
-                <paper-checkbox></paper-checkbox>
-              </div>
-              <div class="flexchild horizontal">
-                [[item.shopname]]
-              </div>
-              <div class="flexchild horizontal">
-                [[item.customername]]
-              </div>
-              <div class="flexchild horizontal">
-                [[item.erp]]
-              </div>
-              <div class="flexchild horizontal">
-                [[item.date]]
-              </div>
-              <div class="flexchild horizontal">
-                [[item.phone]]
-              </div><br/>
-            </div>
-          </template>
         </div>
+      </template>
+    </div>
       <!--</div>-->
       <!--</iron-list>-->
 
