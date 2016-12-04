@@ -1,0 +1,168 @@
+<link rel="import" href="../polymer/polymer-element.html" />
+<link rel="import" href="../iron-ajax/iron-ajax.html" />
+<link rel="import" href="../iron-list/iron-list.html" />
+<link rel="import" href="../paper-icon-button/paper-icon-button.html" />
+<link rel="import" href="../paper-checkbox/paper-checkbox.html" />
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html" />
+<link rel="import" href="../paper-styles/color.html" />
+<link rel="import" href="../app-route/app-route.html"/>
+<link rel="import" href="../iron-meta/iron-meta.html"/>
+
+
+<link rel="import" href="app-icons.html" />
+<link rel="import" href="page-entity-detail.html"/>
+
+<!--
+`page-entity`
+
+
+@demo demo/page-entity-list.html
+-->
+
+<dom-module id="page-entity-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        --primary-text-color : var(--paper-blue-500);
+        direction: rtl;
+      }
+
+      .container {
+        height: 100vh;
+        /*direction: rtl;*/
+      }
+
+      paper-checkbox {
+        direction: ltr;
+        --paper-checkbox-unchecked-color: var(--paper-grey-900);
+      }
+
+      .list-title {
+        background-color: var(--primary-text-color);
+        color: var(--paper-grey-50);
+        padding: 10px 0;
+      }
+
+      .list-title paper-checkbox {
+        --paper-checkbox-unchecked-color: var(--paper-grey-50);
+      }
+
+      .list-title paper-icon-button {
+        display: inline-block;
+      }
+
+      .itemcontainer {
+        /*border-bottom: 1px dotted #343434;*/
+        padding: 10px 0;
+      }
+
+      paper-icon-button {
+        /*display: none;*/
+        color: white;
+      }
+
+      .itemcontainer:hover paper-icon-button {
+        /*display: inline-block;*/
+        color: black;
+
+      }
+
+      .itemcontainer:hover  {
+        background-color: var(--paper-grey-400);
+      }
+
+      .vertical {
+        @apply --layout-vertical;
+      }
+
+      .horizontal {
+        @apply --layout-horizontal;
+      }
+
+      .flexchild {
+        @apply --layout-flex;
+        @apply --layout-center;
+      }
+
+      .icon {
+        /*margin: 10px;*/
+        padding-top: 9px;
+        width: 50px;
+      }
+
+    </style>
+
+    <iron-ajax
+      auto
+      url="../../shopdata.json"
+      handle-as="json"
+      last-response="{{shopdata}}"></iron-ajax>
+
+    <iron-meta key="data" value="{{shopdata}}"></iron-meta>
+
+    <!--<iron-list items="[[shopdata]]" as="item">-->
+    <!--<div class="horizontal">
+      <div class="flexchild">-->
+    <div class="container vertical">
+      <div class="list-title horizontal">
+        <div class="">
+          <paper-icon-button icon="more-vert"></paper-icon-button>
+        </div>
+        <div class="icon">
+          <paper-checkbox></paper-checkbox>
+        </div>
+        <div class="flexchild horizontal">
+          نام فروشگاه
+        </div>
+        <div class="flexchild horizontal">
+          نام مشتری
+        </div>
+        <div class="flexchild horizontal" dir="rtl">
+          کد ERP
+        </div>
+        <div class="flexchild horizontal">
+          تاریخ آخرین ویزیت
+        </div>
+        <div class="flexchild horizontal">
+          تلفن
+        </div>
+      </div>
+      <template is="dom-repeat" items="[[shopdata]]">
+        <div on-click="tap" class="itemcontainer horizontal">
+          <div>
+            <paper-icon-button icon="create"></paper-icon-button>
+          </div>
+          <div class="icon">
+            <paper-checkbox></paper-checkbox>
+          </div>
+          <div on-click="showdraw" class="flexchild horizontal">
+            <div class="flexchild horizontal">
+              [[item.shopname]]
+            </div>
+            <div class="flexchild horizontal">
+              [[item.customername]]
+            </div>
+            <div class="flexchild horizontal">
+              [[item.erp]]
+            </div>
+            <div class="flexchild horizontal">
+              [[item.date]]
+            </div>
+            <div class="flexchild horizontal">
+              [[item.phone]]
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+      <!--</div>-->
+      <!--</iron-list>-->
+
+      <!--<page-entity-detail route="{{subroute}}"></page-entity-detail>
+    </div>-->
+  </template>
+
+  <script type="text/javascript" src="page-entity-list.js"></script>
+</dom-module>

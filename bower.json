@@ -1,0 +1,37 @@
+{
+  "name": "page-entity",
+  "authors": [
+    "PTC Corporation <info@ptc.co.ir>"
+  ],
+  "description": "PWA elements panel filter",
+  "main": "page-entity.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#2.0-preview",
+    "iron-component-page": "PolymerElements/iron-component-page#2.0-preview",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#2.0-preview",
+    "iron-list": "PolymerElements/iron-list#2.0-preview",
+    "iron-ajax": "PolymerElements/iron-ajax#2.0-preview",
+    "paper-icon-button": "PolymerElements/paper-icon-button#2.0-preview",
+    "iron-icon": "PolymerElements/iron-icon#2.0-preview",
+    "iron-iconset-svg": "PolymerElements/iron-iconset-svg#2.0-preview",
+    "iron-iconset": "PolymerElements/iron-iconset#2.0-preview",
+    "paper-checkbox": "PolymerElements/paper-checkbox#2.0-preview",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#2.0-preview",
+    "iron-image": "PolymerElements/iron-image#2.0-preview"
+  },
+  "devDependencies": {
+    "web-component-tester": "^4.0.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "v1",
+    "polymer": "2.0-preview"
+  }
+}
