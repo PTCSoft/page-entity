@@ -15,7 +15,7 @@
       console.log('************ TAP **************');
 
       var indexnum = event.model.item.index;
-      console.log('dataindex(ID) : ' + this.dataindex);
+      console.log('dataindex(ID) : ' + indexnum);
 
       // this.fire('sendindex', this.dataindex);
       var myevent = new CustomEvent("sendindex",
@@ -29,6 +29,17 @@
       this.dispatchEvent(myevent);
 
       console.log('************ TAP **************');
+    }
+
+    showdraw () {
+      console.log('showdraw');
+
+      // this.fire('sendindex', this.dataindex);
+      var myeventshow = new CustomEvent('showdrawer');
+
+      this.dispatchEvent(myeventshow);
+
+      console.log('END showdraw');
     }
   }
 
